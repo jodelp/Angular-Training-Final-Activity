@@ -1,0 +1,8 @@
+<div class="topNavBar">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a routerLink="/tickets" routerLinkActive="active">Tickets</a>
+  <a routerLink="/about-us" routerLinkActive="active">About Us</a>
+
+  <a routerLink="" *ngIf="isLogged" (click)="onLogout()">Logout</a>
+
+</div>

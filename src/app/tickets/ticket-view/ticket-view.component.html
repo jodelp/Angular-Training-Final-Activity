@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Tickets</h1>
+  <hr/>
+  <h4>
+    <strong>[{{ selectedTicket?.template.alias }}] {{ selectedTicket?.template.name }}
+      <div>
+        #{{ selectedTicket?.serial }}
+      </div>
+    </strong>
+  </h4>
+  <hr/>
+  <div>
+    <div class="card" style="border-style: none!important;" >
+      <div class="card-body">
+
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Submitted at:</strong>
+            {{ selectedTicket?.created_at | date:'dd-MMM-yyyy'}}
+          </li>
+          <li class="list-group-item"><strong>Priority:</strong> {{ selectedTicket?.priority }} </li>
+          <li class="list-group-item"><strong>Status:</strong> {{ selectedTicket?.status }} </li>
+          <li class="list-group-item"><strong>Assignee:</strong> {{ selectedTicket?.assignee || 'Unassigned' }} </li>
+        </ul>
+        <br/>
+
+        <button routerLink="/tickets" class="btn bg-dark text-white">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>

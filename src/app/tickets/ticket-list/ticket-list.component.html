@@ -1,0 +1,36 @@
+<div class="container mt-3">
+  <h1>Tickets</h1>
+  <hr/>
+  <p style="font-size: 12px; font-weight: bold;">Total: {{ myTicketsCount }} records</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Assignee</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of myTickets">
+        <td>
+          <strong>[{{ ticket.template.alias }}]</strong> {{ ticket.template.name }}
+          <div>
+            #{{ ticket.serial }}
+          </div>
+        </td>
+        <td>{{ ticket.assignee || 'Unassigned' }}</td>
+        <td>{{ ticket.priority }}</td>
+        <td>{{ ticket.status }}</td>
+        <td>
+          <button class="btn btn-dark"
+                  type="button"
+                  [routerLink]="'ticket/'+ticket?.id+'/view'">
+              View
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

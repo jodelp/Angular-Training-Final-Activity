@@ -1,0 +1,42 @@
+<div class="container col-6 mt-5">
+  <div class="card">
+    <div class="card-header card bg-dark text-white">Login</div>
+    <div class="card-body">
+      <div *ngIf="!isLogged">
+        <div class="form-group">
+
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div id="username" class="row">
+              <label for="username">Username</label>
+
+              <input type="text" class="form-control" formControlName="username">
+              <span *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched" class="text-danger"
+                style="font-size: 14px; font-weight: bold;">
+                  *Username is required
+              </span>
+            </div>
+
+            <br/>
+
+            <div id="password" class="row">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" formControlName="password"/>
+              <span *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" class="text-danger"
+                style="font-size: 14px; font-weight: bold;">
+                  *Password is required
+              </span>
+            </div>
+
+            <br/>
+
+            <div class="row">
+              <button class="btn bg-dark text-white" type="submit">Submit</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

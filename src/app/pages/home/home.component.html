@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="card" style="border-style: none!important; margin-top: 2%;">
+    <div class="card-header">
+      <h1 *ngIf="!isLogged">Welcome!</h1>
+      <h1 *ngIf="isLogged">Welcome {{ loggedUser?.alias }} !</h1>
+    </div>
+    <div class="card-body text-justify">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies malesuada est vitae tristique. Vivamus quis auctor nunc. Mauris mauris nibh, sollicitudin a mi sed, pretium maximus lacus. Sed ut quam porta sapien pharetra tristique et pharetra felis. Suspendisse potenti. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec semper consectetur eros a efficitur. Maecenas egestas ultricies odio ac venenatis. Maecenas quis placerat urna. Etiam maximus congue tortor vitae tincidunt. In lacus magna, lobortis et elit ac, rhoncus faucibus tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed odio quam, mollis tincidunt arcu quis, dapibus congue magna. Vivamus suscipit nisl eget enim elementum vulputate. </p>
+
+      <p>Morbi dignissim a est sed tristique. Ut eu lectus iaculis, molestie mi sed, volutpat mi. Praesent a elementum est. Maecenas convallis neque id vestibulum lacinia. Fusce iaculis ultricies mi id fringilla. Praesent congue nisi eu massa molestie, vel euismod magna lobortis. Nunc quam lorem, auctor vitae tincidunt et, tristique in libero. Fusce ornare lectus at sollicitudin vehicula. Donec urna risus, bibendum eget auctor at, consectetur eget augue. Pellentesque aliquet sed nisl quis lobortis. Maecenas mauris tortor, dapibus nec sollicitudin vitae, lobortis vel mi. Praesent quam lorem, ultricies vitae consectetur eu, consequat non felis. </p>
+    </div>
+  </div>
+</div>

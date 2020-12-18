@@ -1,0 +1,20 @@
+<div>
+  <div class="card" style="border-style: none!important;">
+    <div class="card-body">
+      <img class="rounded-circle card-img-top img-responsive mb-3" alt="100x100" src="{{ profilePic || 'https://d2hqr1s9kfm9jo.cloudfront.net/production/images/sales_agents/14969/data.original.?1577457165'}}"
+    data-holder-rendered="true">
+
+
+    <button *ngIf="isLogged" style="width: 100%; margin-top: 10%; margin-bottom: 5%;" routerLink="/my-profile" class="btn bg-dark text-white">Edit Profile</button>
+
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Name:</strong> {{ full_name }} </li>
+      <li class="list-group-item"><strong>Job Title:</strong> {{ job_title }} </li>
+      <li class="list-group-item"><strong>Email:</strong> {{ email }} </li>
+      <li class="list-group-item"><strong>Mobile Number:</strong> {{ mobile_number }} </li>
+    </ul>
+
+    </div>
+  </div>
+</div>
+
